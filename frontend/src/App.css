@@ -1,38 +1,151 @@
+/* Amazon-like styling */
 .App {
-    text-align: center;
+  font-family: "Amazon Ember", Arial, sans-serif;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Line clamp utility for text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.App-link {
-    color: #61dafb;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Amazon-like button styles */
+.btn-amazon-primary {
+  background-color: #ff9900;
+  border: 1px solid #e47911;
+  color: #111;
+  font-weight: 600;
+}
+
+.btn-amazon-primary:hover {
+  background-color: #e47911;
+  border-color: #e47911;
+}
+
+.btn-amazon-secondary {
+  background-color: #ffd814;
+  border: 1px solid #fcd200;
+  color: #0f1111;
+  font-weight: 600;
+}
+
+.btn-amazon-secondary:hover {
+  background-color: #f7ca00;
+  border-color: #f2c200;
+}
+
+/* Focus styles */
+.focus-amazon:focus {
+  outline: 2px solid #ff9900;
+  outline-offset: 2px;
+}
+
+/* Rating stars */
+.star-rating {
+  color: #ff9900;
+}
+
+/* Price styling */
+.price-large {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #b12704;
+}
+
+.price-small {
+  font-size: 0.875rem;
+  color: #565959;
+  text-decoration: line-through;
+}
+
+/* Card hover effects */
+.product-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom gradient backgrounds */
+.gradient-amazon {
+  background: linear-gradient(135deg, #232f3e 0%, #131a22 100%);
+}
+
+/* Image hover effects */
+.image-hover {
+  transition: transform 0.3s ease;
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Badge styles */
+.badge-discount {
+  background-color: #cc0c39;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.badge-prime {
+  color: #007185;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
+  
+  .mobile-full {
+    width: 100%;
+  }
 }
