@@ -6,7 +6,7 @@ A pixel-perfect Amazon clone featuring intelligent product recommendations power
 
 ## 🚀 Live Demo
 
-🌐 **[View Live Demo](https://your-vercel-url.vercel.app)** *(Replace with your deployed URL)*
+🌐 **[View Live Demo](https://amazon-clone-with-ml.vercel.app/)**
 
 ## ✨ Key Features
 
